@@ -14,7 +14,7 @@ prepare_data <- function(raw, type){
     pivot_longer(cols = colnames(.)[-1])
 }
 
-confirmed_cases <- prepare_data(raw_data, 'confirmed') %>% rename(date = name, 'confirmed' = value)
+confirmed_cases <- prepare_data(raw_data, 'confirmed') %>% rename(date = name, confirmed = value)
 deaths <- prepare_data(raw_data, 'deaths') %>% rename(date = name, 'deaths' = value)
 recovered <- prepare_data(raw_data, 'recovered') %>% rename(date = name, 'recovered' = value)
 
