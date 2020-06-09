@@ -1,4 +1,4 @@
-countries_to_plot <- c('Russia', 'Belgium', 'Netherlands', 'Italy', 'Israel', 'Germany')
+countries_to_plot <- c('Russia', 'Belgium', 'Netherlands', 'Italy', 'Israel', 'Germany', 'US')
 
 ggplot(data = cov_complete_data[cov_complete_data$country %in% countries_to_plot, ], aes(x = date)) +
   geom_line(aes(y = confirmed_diff, group = country), colour = 'blue') +
